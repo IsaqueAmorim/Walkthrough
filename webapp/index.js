@@ -1,14 +1,20 @@
 sap.ui.define([
-	"sap/m/Button",
-	"sap/m/MessageToast"
-], function (Button, MessageToast) {
+
+], function () {
 	"use strict";
 
-	new Button({
-		text: "Ready...",
-		press: function () {
-			MessageToast.show("Hello World!");
-		}
+
+	alert("UI5 is ready");
+});
+
+sap.ui.define([
+	"sap/m/Text"
+
+], function (Text) {
+	"use strict";
+
+	new Text({
+		text: "Hello World"
 	}).placeAt("content");
 
 });
