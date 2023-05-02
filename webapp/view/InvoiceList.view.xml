@@ -17,6 +17,7 @@
 				showMeasure: false
 			}
 		}"
+      numberState = "{= ${invoice>ExtendedPrice}>50 ? 'Error' : 'Success'}"
 		numberUnit="{view>/currency}"/>
 	</items>
    </List>
