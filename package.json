@@ -5,10 +5,12 @@
   "description": "Sample: Quickstart - Step 1 - Ready",
   "scripts": {
     "start": "ui5 serve",
-    "build": "ui5 build"
+    "build": "ui5 build",
+    "proxy": "node proxy.js"
   },
   "dependencies": {
-    "@openui5/themelib_sap_fiori_3": "^1"
+    "@openui5/themelib_sap_fiori_3": "^1",
+    "cors-anywhere": "^0.4.4"
   },
   "devDependencies": {
     "@ui5/cli": "^2.0.0"

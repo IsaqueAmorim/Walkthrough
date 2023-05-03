@@ -8,8 +8,24 @@
       "description": "{{appDescription}}",
       "applicationVersion": {
         "version": "1.0.0"
-      }
-    },
+      },
+      "scripts": {
+        "proxy": "node proxy.js"
+      },
+      "devDependencies": {
+        "myProxy": "^x.y.z"
+      },
+      "dataSources": {
+        "invoiceRemote": {
+          "uri": "http://localhost:8080/https://services.odata.org/V2/Northwind/Northwind.svc/",
+          "type": "OData",
+          "settings": {
+            
+            "odataVersion": "2.0"
+          }
+        }
+    }
+		},
     "sap.ui": {
       "technology": "UI5",
       "deviceTypes": {
@@ -41,8 +57,7 @@
           }
         },
         "invoice": {
-          "type": "sap.ui.model.json.JSONModel",
-          "uri": "Invoices.json"
+          "dataSource": "invoiceRemote"
           } 
       },
       "resources": {
